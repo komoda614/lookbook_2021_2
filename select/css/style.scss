@@ -1,0 +1,85 @@
+@charset "UFT-8";
+
+$media-pc: 761px;
+@mixin pc {
+  @media only screen and (min-width: $media-pc) {
+    @content;
+  }
+}
+
+html {
+  body {
+    header {
+      height: 60px;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      @include pc {
+        height: 54px;
+      }
+    }
+    main {
+      height: calc(100vh - 60px);
+      width: 100vw;
+      background: url(../clothes/image/common/window_background.jpeg) no-repeat
+        center center/cover;
+      position: fixed;
+      top: 60px;
+      left: 0%;
+      .mask_select_title_smp {
+        height: 15vw;
+        width: 70vw;
+        margin: 30vh auto 4vh auto;
+        @include pc {
+          display: none;
+        }
+        img {
+          height: 15vw;
+          width: 70vw;
+        }
+      }
+      .mask_select_title_pc {
+        display: none;
+        width: 45vw;
+        height: 5vw;
+        margin: 18vh auto 8vh auto;
+        @include pc {
+          display: block;
+        }
+        img {
+          height: auto;
+          width: 45vw;
+        }
+      }
+
+      .select_icons {
+        width: 90vw;
+        height: 56vw;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @include pc {
+          width: 58vw;
+          height: auto;
+          margin: 8vh auto auto auto;
+        }
+        a {
+          width: 16vw;
+          height: auto;
+          @include pc {
+            width: 10vw;
+          }
+          img {
+            width: 16vw;
+            height: a;
+            @include pc {
+              width: 10vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

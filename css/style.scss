@@ -1,0 +1,105 @@
+@charset "UFT-8";
+
+$media-pc: 761px;
+@mixin pc {
+  @media only screen and (min-width: $media-pc) {
+    @content;
+  }
+}
+
+html {
+  body {
+    main {
+      .background {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .transition_1 {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        @include pc {
+          display: block;
+          animation: fadein 3s ease 2s 1 forwards;
+          position: fixed;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          @keyframes fadein {
+            /*animation-nameで設定した値を書く*/
+
+            0% {
+              opacity: 0;
+            } /*アニメーション開始時は不透明度0%*/
+
+            100% {
+              opacity: 1;
+            } /*アニメーション終了時は不透明度100%*/
+          }
+        }
+      }
+      .transition_2 {
+        width: 150vw;
+        height: 60vh;
+        position: fixed;
+        top: 20vh;
+        left: -24vw;
+        @include pc {
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          animation: fadein 3s ease 5s 1 forwards;
+          opacity: 0;
+          @keyframes fadein {
+            /*animation-nameで設定した値を書く*/
+
+            0% {
+              opacity: 0;
+            } /*アニメーション開始時は不透明度0%*/
+
+            100% {
+              opacity: 1;
+            } /*アニメーション終了時は不透明度100%*/
+          }
+        }
+      }
+      .transition_3 {
+        width: 50vw;
+        height: 5vh;
+        position: fixed;
+        top: 65vh;
+        left: 25vw;
+        img {
+          width: 50vw;
+          height: 5vh;
+          @include pc {
+            width: 30vw;
+            height: 5vh;
+          }
+        }
+
+        @include pc {
+          width: 30vw;
+          height: 5vh;
+          animation: fadein 3s ease 5s 1 forwards;
+          opacity: 0;
+          @keyframes fadein {
+            /*animation-nameで設定した値を書く*/
+
+            0% {
+              opacity: 0;
+            } /*アニメーション開始時は不透明度0%*/
+
+            100% {
+              opacity: 1;
+            } /*アニメーション終了時は不透明度100%*/
+          }
+        }
+      }
+    }
+  }
+}

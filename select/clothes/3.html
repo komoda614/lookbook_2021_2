@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+</head>
+<body>
+    <main>
+        <header></header>
+
+        <img src="image/3/model_name.png" class="model_name" alt="">
+
+        <model-viewer
+        class="model-viewer"
+        ios-src="/models/3.usdz"
+        src="/models/3.glb"
+        preload="preload"
+        camera-controls="camera-controls"
+        shadow-intensity="1"
+        ar="ar"
+        ar-modes="webxr scene-viewer quick-look fallback"
+        ar-scale="fixed"
+        alt="3D model of notconventional"
+        camera-orbit = "0deg 90deg 200%"
+        >
+            <!-- <button class="model-viewer-btn" slot="ar-button">AR</button> -->
+        </model-viewer>
+
+        <div class="display_buttons">
+            <div class="status_btn_container">
+                <div class="arrow" id="arrow_status"></div>
+                <img src="image/common/status_button.png" alt="ステータス" id="status_button" onclick="clickStatusBtn()">    
+            </div>
+            <div class="item_btn_container">
+                <div class="arrow" id="arrow_item"></div>
+                <img src="image/common/items_button.png" alt="アイテム一覧" id="items_button" onclick="clickItemsBtn()">    
+            </div>
+            <div class="ar_btn_container">
+                <img src="image/common/camera.png" class="camera" alt="">
+                <button id="ar-button">
+                    <img src="image/common/ar_button.png" alt="ARを表示" class="ar_icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll_area">
+            <img src="image/common/mask_title_pc.png" class="mask_title" alt="">
+            <div class="arrow_left"><img src="image/common/arrow_left.png" alt=""></div>
+            <div class="mask_icons">
+                <a href="">
+                    <img src="image/1/icon1.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/2/icon2.png" alt="">
+                </a>
+                <img src="image/3/icon3.png" alt="" style="opacity: 0.5;">
+                <a href="">
+                    <img src="image/4/icon4.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/5/icon5.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/6/icon6.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/7/icon7.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/8/icon8.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/9/icon9.png" alt="">
+                </a>
+                <a href="">
+                    <img src="image/10/icon10.png" alt="">
+                </a>
+            </div>
+            <div class="arrow_right"><img src="image/common/arrow_right.png" alt=""></div>
+        </div>
+
+        <div class="items_smp" id="items_smp">
+            <a href=""><img src="image/3/shoulder zip coat.png" alt=""></a>
+            <a href=""><img src="image/3/long shirt.png" alt=""></a>
+            <a href=""><img src="image/3/mesh tee.png" alt=""></a>
+            <a href=""><img src="image/3/balloon pant_.png" alt=""></a>
+        </div>
+        <div class="item_container_pc">
+            <img src="image/common/item_title_pc.png" class="item_title" alt="">
+            <div class="items_pc">
+                <a href=""><img src="image/3/shoulder zip coat.png" alt=""></a>
+                <a href=""><img src="image/3/long shirt.png" alt=""></a>
+                <a href=""><img src="image/3/mesh tee.png" alt=""></a>
+                <a href=""><img src="image/3/balloon pant_.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="status_smp" id="status_smp">
+            <img src="image/3/status_smp.png" alt="">
+        </div>
+
+        <div class="status_container_pc">
+            <img src="image/common/status_title_pc.png" class="status_title" alt="">
+            <div class="status_pc">
+                <img src="image/3/status_pc.png" alt="">
+            </div>
+        </div>
+
+
+    </main>
+
+    <script>
+        document.getElementById("items_smp").style.display ="none";
+        document.getElementById("status_smp").style.display ="none";
+        document.getElementById("arrow_item").style.transform ="rotate(" + 0 + "deg)";
+        document.getElementById("arrow_status").style.transform ="rotate(" + 0 + "deg)";
+        const items = document.getElementById("items_smp");
+        const status = document.getElementById("status_smp");
+        const arrow_item = document.getElementById("arrow_item");
+        const arrow_status = document.getElementById("arrow_status");
+
+
+    function clickItemsBtn(){
+
+        if(items.style.display=="flex"){
+            items.style.display ="none";
+            arrow_item.style.transform ="rotate(" + 0 + "deg)";
+        }else{
+            items.style.display ="flex";
+            arrow_item.style.transform ="rotate(" + 270 + "deg)";
+        }
+
+        if(status.style.display=="block"){
+            status.style.display ="none";
+            arrow_status.style.transform ="rotate(" + 0 + "deg)";
+        }
+
+    }
+    function clickStatusBtn(){
+
+        if(status.style.display=="block"){
+            status.style.display ="none";
+            arrow_status.style.transform ="rotate(" + 0 + "deg)";
+        }else{
+            status.style.display ="block";
+            arrow_status.style.transform ="rotate(" + 270 + "deg)";
+        }
+
+        if(items.style.display=="flex"){
+            items.style.display ="none";
+            arrow_item.style.transform ="rotate(" + 0 + "deg)";
+        }
+
+    }
+    </script>
+
+
+    <!-- bodyタグ内の任意の位置に配置-->
+    <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <script>
+        document.querySelector('#ar-button').addEventListener('click', (event) => {
+          const modelViewer = document.querySelector("model-viewer");
+          modelViewer.activateAR();
+        });
+      </script>
+            
+</body>
+</html>
