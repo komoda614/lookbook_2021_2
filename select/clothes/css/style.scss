@@ -1,0 +1,341 @@
+@charset "UFT-8";
+
+$media-pc: 761px;
+@mixin pc {
+  @media only screen and (min-width: $media-pc) {
+    @content;
+  }
+}
+
+html {
+  body {
+    main {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      @include pc {
+        background: url(../image/common/window_background.jpeg) no-repeat center
+          center/cover;
+      }
+
+      header {
+        height: 60px;
+        width: 100vw;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        @include pc {
+          height: 54px;
+        }
+      }
+
+      .model_name {
+        height: 8vh;
+        width: auto;
+        position: fixed;
+        top: calc(60px + 2vh);
+        left: 0;
+        z-index: 999;
+        @include pc {
+          height: 8vh;
+          top: 12vh;
+          left: 2.5vw;
+        }
+      }
+
+      model-viewer {
+        width: 100vw;
+        height: calc(100vh - 90px);
+        background: url(../image/common/modelviewer_background.png) no-repeat
+          center center/cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include pc {
+          width: 36vw;
+          height: 74vh;
+          top: 20vh;
+          left: 4vw;
+          border: 2px solid #fff;
+        }
+        // button {
+        //   position: absolute;
+        //   right: 15px;
+        //   top: 80px;
+        //   width: 100px;
+        //   height: 50px;
+        //   font-weight: bold;
+        //   line-height: 50px;
+        //   color: white;
+        //   border: 1px solid white;
+        //   text-align: center;
+        // }
+      }
+
+      .display_buttons {
+        width: 96vw;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 90px;
+        left: 2vw;
+        @include pc {
+          display: none;
+        }
+
+        .status_btn_container {
+          width: 30vw;
+          height: 36px;
+          border-bottom: 2px solid #fff;
+          display: flex;
+          .arrow {
+            margin-top: 6px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11px 0 11px 20px;
+            border-color: transparent transparent transparent #ffffff;
+          }
+          img {
+            height: 42px;
+            width: auto;
+          }
+        }
+
+        .item_btn_container {
+          width: 30vw;
+          height: 36px;
+          border-bottom: 2px solid #fff;
+          display: flex;
+          .arrow {
+            margin-top: 6px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11px 0 11px 20px;
+            border-color: transparent transparent transparent #ffffff;
+          }
+          img {
+            height: 42px;
+            width: auto;
+          }
+        }
+
+        .ar_btn_container {
+          width: 30vw;
+          height: 36px;
+          border-bottom: 2px solid #fff;
+          display: flex;
+          .camera {
+            margin-top: 4px;
+            width: 26px;
+            height: 28px;
+          }
+          button {
+            .ar_icon {
+              height: 42px;
+              width: auto;
+            }
+          }
+        }
+      }
+      .arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 11px 0 11px 20px;
+        border-color: transparent transparent transparent #ffffff;
+      }
+      img {
+        width: 30vw;
+        height: 40px;
+      }
+    }
+
+    .scroll_area {
+      width: 100vw;
+      height: 90px;
+      background: url("../image/common/icons_background.png") no-repeat center
+        center/cover;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      @include pc {
+        width: 26vw;
+        height: 31vh;
+        bottom: 6vh;
+        left: 70vw;
+        background-image: none;
+        display: block;
+      }
+      .mask_title {
+        display: none;
+        width: 26vw;
+        @include pc {
+          display: block;
+        }
+      }
+      .arrow_left {
+        width: 6vw;
+        height: 20px;
+        @include pc {
+          display: none;
+        }
+        img {
+          width: 6vw;
+          height: 20px;
+        }
+      }
+      .mask_icons {
+        width: 80vw;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -ms-overflow-style: none; /* IE, Edge 対応 */
+        scrollbar-width: none; /* Firefox 対応 */
+        &::-webkit-scrollbar {
+          /* Chrome, Safari 対応 */
+          display: none;
+        }
+        @include pc {
+          width: 26vw;
+          height: 12vw;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-content: space-around;
+          position: absolute;
+          bottom: 0;
+        }
+
+        img {
+          width: 16vw;
+          max-width: 90px;
+          height: auto;
+          @include pc {
+            width: 5vw;
+            max-width: 5vw;
+            height: auto;
+          }
+        }
+
+        a {
+          img {
+            width: 16vw;
+            max-width: 90px;
+            height: auto;
+            @include pc {
+              width: 5vw;
+              max-width: 5vw;
+              height: auto;
+            }
+          }
+        }
+      }
+      .arrow_right {
+        width: 6vw;
+        height: 20px;
+        @include pc {
+          display: none;
+        }
+        img {
+          width: 6vw;
+          height: 20px;
+        }
+      }
+    }
+
+    .items_smp {
+      width: 70vw;
+      height: 50vh;
+      display: flex;
+      // display: none;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      position: fixed;
+      top: calc(60px + 12vh);
+      right: 15vw;
+      a {
+        img {
+          width: 30vw;
+          height: 30vw;
+        }
+      }
+    }
+    .item_container_pc {
+      display: none;
+      width: 24vw;
+      height: 76vh; // アイテム数によって変更
+      position: fixed;
+      top: 20vh;
+      left: 43vw;
+      @include pc {
+        display: block;
+      }
+      .item_title {
+        width: 24vw;
+      }
+
+      .items_pc {
+        width: 24vw;
+        height: 69vh;
+        // position: absolute;
+        // bottom: 0;
+        // left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start; // アイテム数によって変更
+        a {
+          width: 11vw;
+          max-width: 22vh;
+          height: 11vw;
+          max-height: 22vh;
+          margin-top: calc(23vh - 11vw);
+          img {
+            width: 11vw;
+            max-width: 22vh;
+            height: 11vw;
+            max-height: 22vh;
+          }
+        }
+      }
+    }
+
+    .status_smp {
+      display: none;
+      img {
+        width: 60vw;
+        position: fixed;
+        top: calc(60px + 12vh);
+        left: 0;
+      }
+    }
+    .status_container_pc {
+      display: none;
+      width: 26vw;
+      height: 45vh;
+      position: fixed;
+      top: 20vh;
+      left: 70vw;
+      @include pc {
+        display: block;
+      }
+      .status_title {
+        width: 26vw;
+      }
+      .status_pc {
+        img {
+          width: 26vw;
+          height: 30vh;
+        }
+      }
+    }
+  }
+}

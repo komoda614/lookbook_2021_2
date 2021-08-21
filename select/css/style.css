@@ -1,0 +1,96 @@
+html body header {
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (min-width: 761px) {
+  html body header {
+    height: 54px;
+  }
+}
+
+html body main {
+  height: calc(100vh - 60px);
+  width: 100vw;
+  background: url(../clothes/image/common/window_background.jpeg) no-repeat center center/cover;
+  position: fixed;
+  top: 60px;
+  left: 0%;
+}
+
+html body main .mask_select_title_smp {
+  height: 15vw;
+  width: 70vw;
+  margin: 30vh auto 4vh auto;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .mask_select_title_smp {
+    display: none;
+  }
+}
+
+html body main .mask_select_title_smp img {
+  height: 15vw;
+  width: 70vw;
+}
+
+html body main .mask_select_title_pc {
+  display: none;
+  width: 45vw;
+  height: 5vw;
+  margin: 18vh auto 8vh auto;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .mask_select_title_pc {
+    display: block;
+  }
+}
+
+html body main .mask_select_title_pc img {
+  height: auto;
+  width: 45vw;
+}
+
+html body main .select_icons {
+  width: 90vw;
+  height: 56vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .select_icons {
+    width: 58vw;
+    height: auto;
+    margin: 8vh auto auto auto;
+  }
+}
+
+html body main .select_icons a {
+  width: 16vw;
+  height: auto;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .select_icons a {
+    width: 10vw;
+  }
+}
+
+html body main .select_icons a img {
+  width: 16vw;
+  height: a;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .select_icons a img {
+    width: 10vw;
+  }
+}

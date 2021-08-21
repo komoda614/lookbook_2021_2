@@ -1,0 +1,106 @@
+@charset "UTF-8";
+html body main .background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+html body main .transition_1 {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .transition_1 {
+    display: block;
+    animation: fadein 3s ease 2s 1 forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  @keyframes fadein {
+    /*animation-nameで設定した値を書く*/
+    0% {
+      opacity: 0;
+    }
+    /*アニメーション開始時は不透明度0%*/
+    100% {
+      opacity: 1;
+    }
+    /*アニメーション終了時は不透明度100%*/
+  }
+}
+
+html body main .transition_2 {
+  width: 150vw;
+  height: 60vh;
+  position: fixed;
+  top: 20vh;
+  left: -24vw;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .transition_2 {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    animation: fadein 3s ease 5s 1 forwards;
+    opacity: 0;
+  }
+  @keyframes fadein {
+    /*animation-nameで設定した値を書く*/
+    0% {
+      opacity: 0;
+    }
+    /*アニメーション開始時は不透明度0%*/
+    100% {
+      opacity: 1;
+    }
+    /*アニメーション終了時は不透明度100%*/
+  }
+}
+
+html body main .transition_3 {
+  width: 50vw;
+  height: 5vh;
+  position: fixed;
+  top: 65vh;
+  left: 25vw;
+}
+
+html body main .transition_3 img {
+  width: 50vw;
+  height: 5vh;
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .transition_3 img {
+    width: 30vw;
+    height: 5vh;
+  }
+}
+
+@media only screen and (min-width: 761px) {
+  html body main .transition_3 {
+    width: 30vw;
+    height: 5vh;
+    animation: fadein 3s ease 5s 1 forwards;
+    opacity: 0;
+  }
+  @keyframes fadein {
+    /*animation-nameで設定した値を書く*/
+    0% {
+      opacity: 0;
+    }
+    /*アニメーション開始時は不透明度0%*/
+    100% {
+      opacity: 1;
+    }
+    /*アニメーション終了時は不透明度100%*/
+  }
+}
