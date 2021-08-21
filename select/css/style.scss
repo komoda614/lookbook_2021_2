@@ -9,12 +9,16 @@ $media-pc: 761px;
 
 html {
   body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
     header {
       height: 60px;
       width: 100vw;
       position: fixed;
       top: 0;
       left: 0;
+      background-color: #fff;
       @include pc {
         height: 54px;
       }
@@ -22,60 +26,115 @@ html {
     main {
       height: calc(100vh - 60px);
       width: 100vw;
-      background: url(../clothes/image/common/window_background.jpeg) no-repeat
-        center center/cover;
       position: fixed;
       top: 60px;
-      left: 0%;
-      .mask_select_title_smp {
-        height: 15vw;
-        width: 70vw;
-        margin: 30vh auto 4vh auto;
-        @include pc {
-          display: none;
-        }
-        img {
-          height: 15vw;
-          width: 70vw;
-        }
+      left: 0;
+      @include pc {
+        height: calc(100vh - 54px);
+        top: 54px;
       }
-      .mask_select_title_pc {
-        display: none;
-        width: 45vw;
-        height: 5vw;
-        margin: 18vh auto 8vh auto;
-        @include pc {
-          display: block;
-        }
-        img {
+      .background_area {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .background_smp {
+          width: auto;
           height: auto;
-          width: 45vw;
-        }
-      }
-
-      .select_icons {
-        width: 90vw;
-        height: 56vw;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        @include pc {
-          width: 58vw;
-          height: auto;
-          margin: 8vh auto auto auto;
-        }
-        a {
-          width: 16vw;
-          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
           @include pc {
-            width: 10vw;
+            display: none;
+          }
+        }
+        .background_pc {
+          display: none;
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          @include pc {
+            display: inline;
+          }
+        }
+
+        .mask_select_title_smp {
+          height: auto;
+          width: 58%;
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+
+          @include pc {
+            display: none;
           }
           img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .mask_select_title_pc {
+          height: auto;
+          width: 46%;
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          display: none;
+          @include pc {
+            display: block;
+          }
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .select_icons {
+          width: 90%;
+          height: 20%;
+          // margin: 0 auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          @include pc {
+            width: 64%;
+            height: 60%;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+          }
+          a {
             width: 16vw;
-            height: a;
+            height: auto;
+            opacity: 0.5;
+            &:hover {
+              opacity: 1;
+            }
             @include pc {
-              width: 10vw;
+              width: 20%;
+              height: auto;
+            }
+            img {
+              width: 16vw;
+              height: a;
+              @include pc {
+                width: 100%;
+                height: auto;
+              }
             }
           }
         }
