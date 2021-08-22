@@ -1,17 +1,9 @@
 @charset "UTF-8";
-html body main {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
+html body {
+  background-color: #000;
 }
 
-@media only screen and (min-width: 761px) {
-  html body main {
-    background: url(../image/common/window_background.jpeg) no-repeat center center/cover;
-  }
-}
-
-html body main header {
+html body header {
   height: 60px;
   width: 100vw;
   background-color: white;
@@ -21,32 +13,50 @@ html body main header {
 }
 
 @media only screen and (min-width: 761px) {
-  html body main header {
+  html body header {
     height: 54px;
   }
 }
 
+html body main {
+  height: calc(100vh - 60px);
+  width: 100vw;
+  max-width: 470px;
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 761px) {
+  html body main {
+    background: url(../image/common/background_pc.png) no-repeat center center/contain;
+    max-width: none;
+  }
+}
+
 html body main .model_name {
-  height: 8vh;
+  height: 25px;
   width: auto;
   position: fixed;
-  top: calc(60px + 2vh);
-  left: 0;
+  top: 22px;
+  left: 20px;
   z-index: 999;
 }
 
 @media only screen and (min-width: 761px) {
   html body main .model_name {
-    height: 8vh;
-    top: 12vh;
-    left: 2.5vw;
+    height: 38px;
+    top: 34px;
+    left: 5%;
   }
 }
 
 html body main model-viewer {
   width: 100vw;
+  max-width: 470px;
   height: calc(100vh - 90px);
-  background: url(../image/common/modelviewer_background.png) no-repeat center center/cover;
+  background: url(../image/common/background_pc.png) no-repeat center center/cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,22 +64,24 @@ html body main model-viewer {
 
 @media only screen and (min-width: 761px) {
   html body main model-viewer {
-    width: 36vw;
-    height: 74vh;
-    top: 20vh;
-    left: 4vw;
+    width: 34%;
+    height: 80%;
+    top: 80px;
+    left: 5%;
     border: 2px solid #fff;
   }
 }
 
 html body main .display_buttons {
-  width: 96vw;
+  width: 96%;
+  max-width: 450px;
   height: 40px;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  bottom: 90px;
-  left: 2vw;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 92px;
 }
 
 @media only screen and (min-width: 761px) {
@@ -79,10 +91,11 @@ html body main .display_buttons {
 }
 
 html body main .display_buttons .status_btn_container {
-  width: 30vw;
-  height: 36px;
-  border-bottom: 2px solid #fff;
+  width: 32%;
+  height: auto;
+  border-bottom: 1.5px solid #fff;
   display: flex;
+  align-items: center;
 }
 
 html body main .display_buttons .status_btn_container .arrow {
@@ -95,15 +108,16 @@ html body main .display_buttons .status_btn_container .arrow {
 }
 
 html body main .display_buttons .status_btn_container img {
-  height: 42px;
+  height: 24px;
   width: auto;
 }
 
 html body main .display_buttons .item_btn_container {
-  width: 30vw;
-  height: 36px;
-  border-bottom: 2px solid #fff;
+  width: 32%;
+  height: auto;
   display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #fff;
 }
 
 html body main .display_buttons .item_btn_container .arrow {
@@ -116,15 +130,16 @@ html body main .display_buttons .item_btn_container .arrow {
 }
 
 html body main .display_buttons .item_btn_container img {
-  height: 42px;
+  height: 24px;
   width: auto;
 }
 
 html body main .display_buttons .ar_btn_container {
-  width: 30vw;
-  height: 36px;
-  border-bottom: 2px solid #fff;
+  width: 32%;
+  height: auto;
   display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #fff;
 }
 
 html body main .display_buttons .ar_btn_container .camera {
@@ -134,7 +149,7 @@ html body main .display_buttons .ar_btn_container .camera {
 }
 
 html body main .display_buttons .ar_btn_container button .ar_icon {
-  height: 42px;
+  height: 24px;
   width: auto;
 }
 
@@ -164,10 +179,10 @@ html body .scroll_area {
 
 @media only screen and (min-width: 761px) {
   html body .scroll_area {
-    width: 26vw;
-    height: 31vh;
-    bottom: 6vh;
-    left: 70vw;
+    width: 26%;
+    height: 250px;
+    bottom: calc(20% - 100px);
+    right: 5%;
     background-image: none;
     display: block;
   }
@@ -175,7 +190,7 @@ html body .scroll_area {
 
 html body .scroll_area .mask_title {
   display: none;
-  width: 26vw;
+  width: 100%;
 }
 
 @media only screen and (min-width: 761px) {
@@ -185,8 +200,8 @@ html body .scroll_area .mask_title {
 }
 
 html body .scroll_area .arrow_left {
-  width: 6vw;
-  height: 20px;
+  width: 20px;
+  height: 80px;
 }
 
 @media only screen and (min-width: 761px) {
@@ -196,12 +211,13 @@ html body .scroll_area .arrow_left {
 }
 
 html body .scroll_area .arrow_left img {
-  width: 6vw;
-  height: 20px;
+  width: 20px;
+  height: 80px;
+  padding-bottom: 20px;
 }
 
 html body .scroll_area .mask_icons {
-  width: 80vw;
+  width: 300px;
   height: 90px;
   display: flex;
   align-items: center;
@@ -221,8 +237,8 @@ html body .scroll_area .mask_icons::-webkit-scrollbar {
 
 @media only screen and (min-width: 761px) {
   html body .scroll_area .mask_icons {
-    width: 26vw;
-    height: 12vw;
+    width: 100%;
+    height: auto;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
@@ -232,7 +248,7 @@ html body .scroll_area .mask_icons::-webkit-scrollbar {
 }
 
 html body .scroll_area .mask_icons img {
-  width: 16vw;
+  width: 60px;
   max-width: 90px;
   height: auto;
 }
@@ -246,7 +262,7 @@ html body .scroll_area .mask_icons img {
 }
 
 html body .scroll_area .mask_icons a img {
-  width: 16vw;
+  width: 60px;
   max-width: 90px;
   height: auto;
 }
@@ -260,8 +276,8 @@ html body .scroll_area .mask_icons a img {
 }
 
 html body .scroll_area .arrow_right {
-  width: 6vw;
-  height: 20px;
+  width: 20px;
+  height: 80px;
 }
 
 @media only screen and (min-width: 761px) {
@@ -271,33 +287,41 @@ html body .scroll_area .arrow_right {
 }
 
 html body .scroll_area .arrow_right img {
-  width: 6vw;
-  height: 20px;
+  width: 20px;
+  height: 80px;
+  padding-bottom: 20px;
+  transform: rotateY(180deg);
 }
 
 html body .items_smp {
-  width: 70vw;
-  height: 50vh;
+  width: 70%;
+  height: 50%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: flex-start;
   position: fixed;
-  top: calc(60px + 12vh);
-  right: 15vw;
+  top: calc(85px + 5%);
+  right: 15%;
+}
+
+html body .items_smp a {
+  width: 44%;
+  height: auto;
 }
 
 html body .items_smp a img {
-  width: 30vw;
-  height: 30vw;
+  width: 100%;
+  height: auto;
 }
 
 html body .item_container_pc {
   display: none;
-  width: 24vw;
-  height: 76vh;
+  width: 24%;
+  height: calc(80vh - 43.2px);
   position: fixed;
-  top: 20vh;
-  left: 43vw;
+  top: 79px;
+  left: 41%;
 }
 
 @media only screen and (min-width: 761px) {
@@ -307,12 +331,13 @@ html body .item_container_pc {
 }
 
 html body .item_container_pc .item_title {
-  width: 24vw;
+  width: 100%;
+  height: auto;
 }
 
 html body .item_container_pc .items_pc {
-  width: 24vw;
-  height: 69vh;
+  width: 100%;
+  height: 76%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -320,38 +345,46 @@ html body .item_container_pc .items_pc {
 }
 
 html body .item_container_pc .items_pc a {
-  width: 11vw;
-  max-width: 22vh;
-  height: 11vw;
-  max-height: 22vh;
+  width: 46%;
+  max-width: 26vh;
+  height: auto;
+  max-height: 18vh;
   margin-top: calc(23vh - 11vw);
 }
 
 html body .item_container_pc .items_pc a img {
-  width: 11vw;
-  max-width: 22vh;
-  height: 11vw;
-  max-height: 22vh;
+  width: 100%;
+  max-width: 26vh;
+  height: auto;
+  max-height: 18vh;
 }
 
 html body .status_smp {
-  display: none;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: calc(85px + 5%);
+  left: 20px;
+}
+
+@media only screen and (min-width: 761px) {
+  html body .status_smp {
+    display: none;
+  }
 }
 
 html body .status_smp img {
-  width: 60vw;
-  position: fixed;
-  top: calc(60px + 12vh);
-  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 html body .status_container_pc {
   display: none;
-  width: 26vw;
-  height: 45vh;
+  width: 26%;
+  height: 45%;
   position: fixed;
-  top: 20vh;
-  left: 70vw;
+  top: 76.5px;
+  right: 5%;
 }
 
 @media only screen and (min-width: 761px) {
@@ -361,10 +394,11 @@ html body .status_container_pc {
 }
 
 html body .status_container_pc .status_title {
-  width: 26vw;
+  width: 100%;
 }
 
 html body .status_container_pc .status_pc img {
-  width: 26vw;
-  height: 30vh;
+  width: 100%;
+  height: auto;
+  margin-top: calc(23vh - 11vw);
 }

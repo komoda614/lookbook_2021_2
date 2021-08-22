@@ -9,54 +9,61 @@ $media-pc: 761px;
 
 html {
   body {
-    main {
-      height: 100vh;
+    background-color: #000;
+    header {
+      height: 60px;
       width: 100vw;
-      position: relative;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
       @include pc {
-        background: url(../image/common/window_background.jpeg) no-repeat center
-          center/cover;
+        height: 54px;
       }
+    }
 
-      header {
-        height: 60px;
-        width: 100vw;
-        background-color: white;
-        position: fixed;
-        top: 0;
-        z-index: 9999;
-        @include pc {
-          height: 54px;
-        }
+    main {
+      height: calc(100vh - 60px);
+      width: 100vw;
+      max-width: 470px;
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include pc {
+        background: url(../image/common/background_pc.png) no-repeat center
+          center/contain;
+        max-width: none;
       }
 
       .model_name {
-        height: 8vh;
+        height: 25px;
         width: auto;
         position: fixed;
-        top: calc(60px + 2vh);
-        left: 0;
+        top: 22px;
+        left: 20px;
         z-index: 999;
         @include pc {
-          height: 8vh;
-          top: 12vh;
-          left: 2.5vw;
+          height: 38px;
+          top: 34px;
+          left: 5%;
         }
       }
 
       model-viewer {
         width: 100vw;
+        max-width: 470px;
         height: calc(100vh - 90px);
-        background: url(../image/common/modelviewer_background.png) no-repeat
-          center center/cover;
+        background: url(../image/common/background_pc.png) no-repeat center
+          center/cover;
         position: fixed;
         top: 0;
         left: 0;
         @include pc {
-          width: 36vw;
-          height: 74vh;
-          top: 20vh;
-          left: 4vw;
+          width: 34%;
+          height: 80%;
+          top: 80px;
+          left: 5%;
           border: 2px solid #fff;
         }
         // button {
@@ -74,22 +81,25 @@ html {
       }
 
       .display_buttons {
-        width: 96vw;
+        width: 96%;
+        max-width: 450px;
         height: 40px;
         display: flex;
         justify-content: space-between;
-        position: fixed;
-        bottom: 90px;
-        left: 2vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 92px;
         @include pc {
           display: none;
         }
 
         .status_btn_container {
-          width: 30vw;
-          height: 36px;
-          border-bottom: 2px solid #fff;
+          width: 32%;
+          height: auto;
+          border-bottom: 1.5px solid #fff;
           display: flex;
+          align-items: center;
           .arrow {
             margin-top: 6px;
             width: 0;
@@ -99,16 +109,17 @@ html {
             border-color: transparent transparent transparent #ffffff;
           }
           img {
-            height: 42px;
+            height: 24px;
             width: auto;
           }
         }
 
         .item_btn_container {
-          width: 30vw;
-          height: 36px;
-          border-bottom: 2px solid #fff;
+          width: 32%;
+          height: auto;
           display: flex;
+          align-items: center;
+          border-bottom: 1.5px solid #fff;
           .arrow {
             margin-top: 6px;
             width: 0;
@@ -118,16 +129,17 @@ html {
             border-color: transparent transparent transparent #ffffff;
           }
           img {
-            height: 42px;
+            height: 24px;
             width: auto;
           }
         }
 
         .ar_btn_container {
-          width: 30vw;
-          height: 36px;
-          border-bottom: 2px solid #fff;
+          width: 32%;
+          height: auto;
           display: flex;
+          align-items: center;
+          border-bottom: 1.5px solid #fff;
           .camera {
             margin-top: 4px;
             width: 26px;
@@ -135,7 +147,7 @@ html {
           }
           button {
             .ar_icon {
-              height: 42px;
+              height: 24px;
               width: auto;
             }
           }
@@ -165,33 +177,34 @@ html {
       justify-content: space-around;
       align-items: center;
       @include pc {
-        width: 26vw;
-        height: 31vh;
-        bottom: 6vh;
-        left: 70vw;
+        width: 26%;
+        height: 250px;
+        bottom: calc(20% - 100px);
+        right: 5%;
         background-image: none;
         display: block;
       }
       .mask_title {
         display: none;
-        width: 26vw;
+        width: 100%;
         @include pc {
           display: block;
         }
       }
       .arrow_left {
-        width: 6vw;
-        height: 20px;
+        width: 20px;
+        height: 80px;
         @include pc {
           display: none;
         }
         img {
-          width: 6vw;
-          height: 20px;
+          width: 20px;
+          height: 80px;
+          padding-bottom: 20px;
         }
       }
       .mask_icons {
-        width: 80vw;
+        width: 300px;
         height: 90px;
         display: flex;
         align-items: center;
@@ -205,8 +218,8 @@ html {
           display: none;
         }
         @include pc {
-          width: 26vw;
-          height: 12vw;
+          width: 100%;
+          height: auto;
           flex-wrap: wrap;
           justify-content: space-around;
           align-content: space-around;
@@ -215,7 +228,7 @@ html {
         }
 
         img {
-          width: 16vw;
+          width: 60px;
           max-width: 90px;
           height: auto;
           @include pc {
@@ -227,7 +240,7 @@ html {
 
         a {
           img {
-            width: 16vw;
+            width: 60px;
             max-width: 90px;
             height: auto;
             @include pc {
@@ -239,101 +252,112 @@ html {
         }
       }
       .arrow_right {
-        width: 6vw;
-        height: 20px;
+        width: 20px;
+        height: 80px;
         @include pc {
           display: none;
         }
         img {
-          width: 6vw;
-          height: 20px;
+          width: 20px;
+          height: 80px;
+          padding-bottom: 20px;
+          transform: rotateY(180deg);
         }
       }
     }
 
     .items_smp {
-      width: 70vw;
-      height: 50vh;
+      width: 70%;
+      height: 50%;
       display: flex;
       // display: none;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
+      align-content: flex-start;
       position: fixed;
-      top: calc(60px + 12vh);
-      right: 15vw;
+      top: calc(85px + 5%);
+      right: 15%;
       a {
+        width: 44%;
+        height: auto;
+
         img {
-          width: 30vw;
-          height: 30vw;
+          width: 100%;
+          height: auto;
         }
       }
     }
     .item_container_pc {
       display: none;
-      width: 24vw;
-      height: 76vh; // アイテム数によって変更
+      width: 24%;
+      height: calc(80vh - 43.2px);
       position: fixed;
-      top: 20vh;
-      left: 43vw;
+      top: 79px;
+      left: 41%;
       @include pc {
         display: block;
       }
       .item_title {
-        width: 24vw;
+        width: 100%;
+        height: auto;
       }
 
       .items_pc {
-        width: 24vw;
-        height: 69vh;
-        // position: absolute;
-        // bottom: 0;
-        // left: 0;
+        width: 100%;
+        height: 76%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: flex-start; // アイテム数によって変更
         a {
-          width: 11vw;
-          max-width: 22vh;
-          height: 11vw;
-          max-height: 22vh;
+          width: 46%;
+          max-width: 26vh;
+          height: auto;
+          max-height: 18vh;
           margin-top: calc(23vh - 11vw);
           img {
-            width: 11vw;
-            max-width: 22vh;
-            height: 11vw;
-            max-height: 22vh;
+            width: 100%;
+            max-width: 26vh;
+            height: auto;
+            max-height: 18vh;
           }
         }
       }
     }
 
     .status_smp {
-      display: none;
+      width: 50%;
+      height: auto;
+      position: absolute;
+      top: calc(85px + 5%);
+      left: 20px;
+      @include pc {
+        display: none;
+      }
       img {
-        width: 60vw;
-        position: fixed;
-        top: calc(60px + 12vh);
-        left: 0;
+        width: 100%;
+        height: auto;
       }
     }
     .status_container_pc {
       display: none;
-      width: 26vw;
-      height: 45vh;
+      width: 26%;
+      height: 45%;
       position: fixed;
-      top: 20vh;
-      left: 70vw;
+      top: 76.5px;
+      right: 5%;
       @include pc {
         display: block;
       }
       .status_title {
-        width: 26vw;
+        width: 100%;
       }
       .status_pc {
         img {
-          width: 26vw;
-          height: 30vh;
+          width: 100%;
+          height: auto;
+
+          margin-top: calc(23vh - 11vw);
         }
       }
     }
