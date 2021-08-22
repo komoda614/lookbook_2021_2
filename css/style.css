@@ -1,7 +1,9 @@
 html body main {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: #000;
 }
 
@@ -304,7 +306,7 @@ html body main .smp .transition_5_smp {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 50%;
+  top: 49.5%;
   opacity: 0;
 }
 
