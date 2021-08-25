@@ -6,32 +6,24 @@ html body {
 
 html body header {
   height: 60px;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
   background-color: #fff;
+  z-index: 999;
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body header {
     height: 54px;
   }
 }
 
 html body main {
-  height: calc(100vh - 60px);
+  height: 100vh;
   width: 100vw;
   position: fixed;
-  top: 60px;
-  left: 0;
-}
-
-@media only screen and (min-width: 761px) {
-  html body main {
-    height: calc(100vh - 54px);
-    top: 54px;
-  }
+  top: 0;
 }
 
 html body main .background_area {
@@ -51,7 +43,7 @@ html body main .background_area .background_smp {
   transform: translateY(-50%) translateX(-50%);
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .background_smp {
     display: none;
   }
@@ -69,7 +61,7 @@ html body main .background_area .background_pc {
   transform: translateY(-50%) translateX(-50%);
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .background_pc {
     display: inline;
   }
@@ -84,7 +76,7 @@ html body main .background_area .mask_select_title_smp {
   transform: translateY(-50%) translateX(-50%);
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .mask_select_title_smp {
     display: none;
   }
@@ -105,7 +97,7 @@ html body main .background_area .mask_select_title_pc {
   display: none;
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .mask_select_title_pc {
     display: block;
   }
@@ -118,17 +110,17 @@ html body main .background_area .mask_select_title_pc img {
 
 html body main .background_area .select_icons {
   width: 90%;
-  height: 20%;
+  height: 25%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .select_icons {
     width: 64%;
     height: 60%;
@@ -142,26 +134,25 @@ html body main .background_area .select_icons {
 html body main .background_area .select_icons a {
   width: 16vw;
   height: auto;
-  opacity: 0.5;
 }
 
-html body main .background_area .select_icons a:hover {
-  opacity: 1;
-}
-
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .select_icons a {
     width: 20%;
     height: auto;
+    opacity: 0.5;
+  }
+  html body main .background_area .select_icons a:hover {
+    opacity: 1;
   }
 }
 
 html body main .background_area .select_icons a img {
   width: 16vw;
-  height: a;
+  height: auto;
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 700px) {
   html body main .background_area .select_icons a img {
     width: 100%;
     height: auto;
