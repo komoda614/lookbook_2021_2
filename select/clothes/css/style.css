@@ -98,11 +98,17 @@ html body main .solid_space .item_title {
   }
 }
 
-html body main .solid_space .items_smp {
+html body main .solid_space .items {
   display: none;
 }
 
-html body main .solid_space .items_smp .item1 {
+@media only screen and (min-width: 700px) {
+  html body main .solid_space .items {
+    display: block;
+  }
+}
+
+html body main .solid_space .items .item1 {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -112,12 +118,29 @@ html body main .solid_space .items_smp .item1 {
   left: calc(50% - 70px);
 }
 
-html body main .solid_space .items_smp .item1 img {
+html body main .solid_space .items .item1 img {
   width: 125px;
   height: 125px;
 }
 
-html body main .solid_space .items_smp .item2 {
+@media only screen and (min-width: 700px) {
+  html body main .solid_space .items .item1 {
+    display: block;
+    width: 143px;
+    height: 143px;
+    position: absolute;
+    z-index: 999;
+    transform: translateY(0%) translateX(0%);
+    top: 200px;
+    left: 560px;
+  }
+  html body main .solid_space .items .item1 img {
+    width: 143px;
+    height: 143px;
+  }
+}
+
+html body main .solid_space .items .item2 {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -127,12 +150,29 @@ html body main .solid_space .items_smp .item2 {
   left: calc(50% + 70px);
 }
 
-html body main .solid_space .items_smp .item2 img {
+html body main .solid_space .items .item2 img {
   width: 125px;
   height: 125px;
 }
 
-html body main .solid_space .items_smp .item3 {
+@media only screen and (min-width: 700px) {
+  html body main .solid_space .items .item2 {
+    display: block;
+    width: 143px;
+    height: 143px;
+    position: absolute;
+    z-index: 999;
+    transform: translateY(0%) translateX(0%);
+    top: 200px;
+    left: 716px;
+  }
+  html body main .solid_space .items .item2 img {
+    width: 143px;
+    height: 143px;
+  }
+}
+
+html body main .solid_space .items .item3 {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -142,12 +182,29 @@ html body main .solid_space .items_smp .item3 {
   left: calc(50% - 70px);
 }
 
-html body main .solid_space .items_smp .item3 img {
+html body main .solid_space .items .item3 img {
   width: 125px;
   height: 125px;
 }
 
-html body main .solid_space .items_smp .item4 {
+@media only screen and (min-width: 700px) {
+  html body main .solid_space .items .item3 {
+    display: block;
+    width: 143px;
+    height: 143px;
+    position: absolute;
+    z-index: 999;
+    transform: translateY(0%) translateX(0%);
+    top: 360px;
+    left: 560px;
+  }
+  html body main .solid_space .items .item3 img {
+    width: 143px;
+    height: 143px;
+  }
+}
+
+html body main .solid_space .items .item4 {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -157,12 +214,29 @@ html body main .solid_space .items_smp .item4 {
   left: calc(50% + 70px);
 }
 
-html body main .solid_space .items_smp .item4 img {
+html body main .solid_space .items .item4 img {
   width: 125px;
   height: 125px;
 }
 
-html body main .solid_space .items_smp .item5 {
+@media only screen and (min-width: 700px) {
+  html body main .solid_space .items .item4 {
+    display: block;
+    width: 143px;
+    height: 143px;
+    position: absolute;
+    z-index: 999;
+    transform: translateY(0%) translateX(0%);
+    top: 360px;
+    left: 716px;
+  }
+  html body main .solid_space .items .item4 img {
+    width: 143px;
+    height: 143px;
+  }
+}
+
+html body main .solid_space .items .item5 {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -172,12 +246,29 @@ html body main .solid_space .items_smp .item5 {
   left: calc(50% - 70px);
 }
 
-html body main .solid_space .items_smp .item5 img {
+html body main .solid_space .items .item5 img {
   width: 125px;
   height: 125px;
 }
 
-html body main .solid_space .items_smp .item6 {
+@media only screen and (min-width: 700px) {
+  html body main .solid_space .items .item5 {
+    display: block;
+    width: 143px;
+    height: 143px;
+    position: absolute;
+    z-index: 999;
+    transform: translateY(0%) translateX(0%);
+    top: 518px;
+    left: 560px;
+  }
+  html body main .solid_space .items .item5 img {
+    width: 143px;
+    height: 143px;
+  }
+}
+
+html body main .solid_space .items .item6 {
   width: 125px;
   height: 125px;
   position: fixed;
@@ -187,126 +278,23 @@ html body main .solid_space .items_smp .item6 {
   left: calc(50% + 70px);
 }
 
-html body main .solid_space .items_smp .item6 img {
+html body main .solid_space .items .item6 img {
   width: 125px;
   height: 125px;
 }
 
-html body main .solid_space .items_pc .item1_pc {
-  display: none;
-}
-
 @media only screen and (min-width: 700px) {
-  html body main .solid_space .items_pc .item1_pc {
+  html body main .solid_space .items .item6 {
     display: block;
     width: 143px;
     height: 143px;
     position: absolute;
     z-index: 999;
-    top: 200px;
-    left: 560px;
-  }
-  html body main .solid_space .items_pc .item1_pc img {
-    width: 143px;
-    height: 143px;
-  }
-}
-
-html body main .solid_space .items_pc .item2_pc {
-  display: none;
-}
-
-@media only screen and (min-width: 700px) {
-  html body main .solid_space .items_pc .item2_pc {
-    display: block;
-    width: 143px;
-    height: 143px;
-    position: absolute;
-    z-index: 999;
-    top: 200px;
-    left: 716px;
-  }
-  html body main .solid_space .items_pc .item2_pc img {
-    width: 143px;
-    height: 143px;
-  }
-}
-
-html body main .solid_space .items_pc .item3_pc {
-  display: none;
-}
-
-@media only screen and (min-width: 700px) {
-  html body main .solid_space .items_pc .item3_pc {
-    display: block;
-    width: 143px;
-    height: 143px;
-    position: absolute;
-    z-index: 999;
-    top: 360px;
-    left: 560px;
-  }
-  html body main .solid_space .items_pc .item3_pc img {
-    width: 143px;
-    height: 143px;
-  }
-}
-
-html body main .solid_space .items_pc .item4_pc {
-  display: none;
-}
-
-@media only screen and (min-width: 700px) {
-  html body main .solid_space .items_pc .item4_pc {
-    display: block;
-    width: 143px;
-    height: 143px;
-    position: absolute;
-    z-index: 999;
-    top: 360px;
-    left: 716px;
-  }
-  html body main .solid_space .items_pc .item4_pc img {
-    width: 143px;
-    height: 143px;
-  }
-}
-
-html body main .solid_space .items_pc .item5_pc {
-  display: none;
-}
-
-@media only screen and (min-width: 700px) {
-  html body main .solid_space .items_pc .item5_pc {
-    display: block;
-    width: 143px;
-    height: 143px;
-    position: absolute;
-    z-index: 999;
-    top: 518px;
-    left: 560px;
-  }
-  html body main .solid_space .items_pc .item5_pc img {
-    width: 143px;
-    height: 143px;
-  }
-}
-
-html body main .solid_space .items_pc .item6_pc {
-  display: none;
-}
-
-@media only screen and (min-width: 700px) {
-  html body main .solid_space .items_pc .item6_pc {
-    display: block;
-    width: 143px;
-    height: 143px;
-    position: absolute;
-    z-index: 999;
+    transform: translateY(0%) translateX(0%);
     top: 518px;
     left: 716px;
   }
-  html body main .solid_space .items_pc .item6_pc img {
+  html body main .solid_space .items .item6 img {
     width: 143px;
     height: 143px;
   }

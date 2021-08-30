@@ -120,11 +120,11 @@ html body main .pc .transition_4_pc {
 
 html body main .pc .transition_5_pc {
   width: auto;
-  height: 5%;
+  height: 3.5%;
   max-width: 80%;
   max-height: 80%;
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   animation: fadein 3s ease 3s 1 forwards;
@@ -146,7 +146,29 @@ html body main .pc .transition_5_2_pc {
   max-width: 80%;
   max-height: 80%;
   position: absolute;
-  top: 58%;
+  top: 54.5%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  animation: fadein 3s ease 3.5s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html body main .pc .transition_5_3_pc {
+  width: auto;
+  height: 1.8%;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 59.2%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   animation: fadein 3s ease 3s 1 forwards;
@@ -164,9 +186,10 @@ html body main .pc .transition_5_2_pc {
 
 html body main .pc .transition_6_pc {
   width: 30%;
+  height: 4%;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   top: 70%;
   text-align: center;
   animation: fadein 2s ease 4.5s 1 forwards;
@@ -175,7 +198,7 @@ html body main .pc .transition_6_pc {
 
 @media only screen and (min-width: 761px) {
   html body main .pc .transition_6_pc img {
-    width: 20%;
+    height: 100%;
   }
 }
 
@@ -191,8 +214,8 @@ html body main .pc .transition_6_pc {
 html body main .pc .transition_7_pc {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: calc(70% - 50px);
+  transform: translateY(-50%) translateX(-50%);
+  top: 70%;
 }
 
 @media only screen and (min-width: 761px) {
@@ -279,11 +302,11 @@ html body main .smp .transition_2_smp {
 html body main .smp .transition_3_smp {
   animation: fadein 2s ease 3s 1 forwards;
   width: auto;
-  height: 3%;
+  height: 2%;
   max-width: 80%;
   max-height: 80%;
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   opacity: 0;
@@ -299,13 +322,35 @@ html body main .smp .transition_3_smp {
 }
 
 html body main .smp .transition_3_2_smp {
-  animation: fadein 2s ease 3s 1 forwards;
+  animation: fadein 2s ease 3.5s 1 forwards;
   width: auto;
-  height: 5%;
+  height: 3.5%;
   max-width: 80%;
   max-height: 80%;
   position: absolute;
-  top: 56%;
+  top: 53.5%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  opacity: 0;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html body main .smp .transition_3_3_smp {
+  animation: fadein 2s ease 3s 1 forwards;
+  width: auto;
+  height: 0.9%;
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 56.1%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   opacity: 0;
@@ -323,7 +368,7 @@ html body main .smp .transition_3_2_smp {
 html body main .smp .transition_4_smp {
   animation: fadein 2s ease 5s 1 forwards;
   width: 50%;
-  height: 6%;
+  height: 3%;
   position: absolute;
   top: 65%;
   left: 50%;
@@ -333,7 +378,7 @@ html body main .smp .transition_4_smp {
 }
 
 html body main .smp .transition_4_smp img {
-  height: 50%;
+  height: 100%;
 }
 
 @keyframes fadein {
@@ -349,8 +394,8 @@ html body main .smp .transition_5_smp {
   animation: fadein 2s ease 7s 1 forwards;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: calc(65% - 80px);
+  transform: translateX(-50%) translateY(-50%);
+  top: 65%;
   opacity: 0;
 }
 

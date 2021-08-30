@@ -30,18 +30,10 @@
                 <button id="custom-ar-button" slot="ar-button"></button>
                 </model-viewer>
 
-                <div class="items_smp" id="items_smp">
+                <div class="items" id="items">
                     <a href="" class="item1"><img src="image/6/zip long coat_.png" alt=""></a>
                     <a href="https://www.not-conventional.com/products/detail/1099754" class="item2"><img src="image/6/0821frill shirt_.png" alt=""></a>
                     <a href="" class="item3"><img src="image/6/hakama slacks_.png" alt=""></a>
-                </div>
-                <div class="item_container_pc">
-                    <img src="image/common/item_title_pc.png" class="item_title" alt="">
-                    <div class="items_pc">
-                        <a href="" class="item1_pc"><img src="image/6/zip long coat_.png" alt=""></a>
-                        <a href="https://www.not-conventional.com/products/detail/1099754" class="item2_pc"><img src="image/6/0821frill shirt_.png" alt=""></a>
-                        <a href="" class="item3_pc"><img src="image/6/hakama slacks_.png" alt=""></a>
-                    </div>
                 </div>
         
 
@@ -113,11 +105,10 @@
     </main> 
     
     <script>
-        document.getElementById("items_smp").style.display ="none";
-        document.getElementById("status_smp").style.display ="none";
+                document.getElementById("status_smp").style.display ="none";
         document.getElementById("arrow_item").style.transform ="rotate(" + 0 + "deg)";
         document.getElementById("arrow_status").style.transform ="rotate(" + 0 + "deg)";
-        const items = document.getElementById("items_smp");
+        const items = document.getElementById("items");
         const status = document.getElementById("status_smp");
         const arrow_item = document.getElementById("arrow_item");
         const arrow_status = document.getElementById("arrow_status");
@@ -125,11 +116,11 @@
 
     function clickItemsBtn(){
 
-        if(items.style.display=="flex"){
+        if(items.style.display=="block"){
             items.style.display ="none";
             arrow_item.style.transform ="rotate(" + 0 + "deg)";
         }else{
-            items.style.display ="flex";
+            items.style.display ="block";
             arrow_item.style.transform ="rotate(" + 270 + "deg)";
         }
 
@@ -149,7 +140,7 @@
             arrow_status.style.transform ="rotate(" + 270 + "deg)";
         }
 
-        if(items.style.display=="flex"){
+        if(items.style.display=="block"){
             items.style.display ="none";
             arrow_item.style.transform ="rotate(" + 0 + "deg)";
         }

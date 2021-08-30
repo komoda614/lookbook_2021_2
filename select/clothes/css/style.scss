@@ -24,6 +24,7 @@ $media-pc: 700px;
   height: 143px;
   position: absolute;
   z-index: 999;
+  transform: translateY(0%) translateX(0%);
   img {
     width: 143px;
     height: 143px;
@@ -108,90 +109,123 @@ html {
             left: 561px;
           }
         }
-        .items_smp {
+        .items {
           display: none;
+          @include pc {
+            display: block;
+          }
           .item1 {
             @include item_size_smp;
             top: calc(50% - 180px);
             left: calc(50% - 70px);
+            @include pc {
+              @include item_size_pc;
+              top: 200px;
+              left: 560px;
+            }
           }
           .item2 {
             @include item_size_smp;
             top: calc(50% - 180px);
             left: calc(50% + 70px);
+            @include pc {
+              @include item_size_pc;
+              top: 200px;
+              left: 716px;
+            }
           }
           .item3 {
             @include item_size_smp;
             top: calc(50% - 40px);
             left: calc(50% - 70px);
+            @include pc {
+              @include item_size_pc;
+              top: 360px;
+              left: 560px;
+            }
           }
           .item4 {
             @include item_size_smp;
             top: calc(50% - 40px);
             left: calc(50% + 70px);
+            @include pc {
+              @include item_size_pc;
+              top: 360px;
+              left: 716px;
+            }
           }
           .item5 {
             @include item_size_smp;
             top: calc(50% + 100px);
             left: calc(50% - 70px);
+            @include pc {
+              @include item_size_pc;
+              top: 518px;
+              left: 560px;
+            }
           }
           .item6 {
             @include item_size_smp;
             top: calc(50% + 100px);
             left: calc(50% + 70px);
-          }
-        }
-        .items_pc {
-          .item1_pc {
-            display: none;
             @include pc {
               @include item_size_pc;
-              top: 200px;
-              left: 560px;
+              top: 518px;
+              left: 716px;
             }
           }
+        }
+        // .items_pc {
+        //   .item1_pc {
+        //     display: none;
+        //     @include pc {
+        //       @include item_size_pc;
+        //       top: 200px;
+        //       left: 560px;
+        //     }
+        //   }
 
-          .item2_pc {
-            display: none;
-            @include pc {
-              @include item_size_pc;
-              top: 200px;
-              left: 716px;
-            }
-          }
-          .item3_pc {
-            display: none;
-            @include pc {
-              @include item_size_pc;
-              top: 360px;
-              left: 560px;
-            }
-          }
-          .item4_pc {
-            display: none;
-            @include pc {
-              @include item_size_pc;
-              top: 360px;
-              left: 716px;
-            }
-          }
-          .item5_pc {
-            display: none;
-            @include pc {
-              @include item_size_pc;
-              top: 518px;
-              left: 560px;
-            }
-          }
-          .item6_pc {
-            display: none;
-            @include pc {
-              @include item_size_pc;
-              top: 518px;
-              left: 716px;
-            }
-          }
-        }
+        //   .item2_pc {
+        //     display: none;
+        //     @include pc {
+        //       @include item_size_pc;
+        //       top: 200px;
+        //       left: 716px;
+        //     }
+        //   }
+        //   .item3_pc {
+        //     display: none;
+        //     @include pc {
+        //       @include item_size_pc;
+        //       top: 360px;
+        //       left: 560px;
+        //     }
+        //   }
+        //   .item4_pc {
+        //     display: none;
+        //     @include pc {
+        //       @include item_size_pc;
+        //       top: 360px;
+        //       left: 716px;
+        //     }
+        //   }
+        //   .item5_pc {
+        //     display: none;
+        //     @include pc {
+        //       @include item_size_pc;
+        //       top: 518px;
+        //       left: 560px;
+        //     }
+        //   }
+        //   .item6_pc {
+        //     display: none;
+        //     @include pc {
+        //       @include item_size_pc;
+        //       top: 518px;
+        //       left: 716px;
+        //     }
+        //   }
+        // }
 
         .status_container {
           .status_title {
