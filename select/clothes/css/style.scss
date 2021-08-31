@@ -60,11 +60,11 @@ html {
         }
 
         .model_name {
-          width: autos;
+          width: auto;
           height: 22px;
           position: fixed;
           top: 10vh;
-          left: 10vw;
+          left: 9.8vw;
           z-index: 999;
           @include pc {
             width: auto;
