@@ -1,0 +1,2 @@
+modelname 四角外す
+no.10 item追加
